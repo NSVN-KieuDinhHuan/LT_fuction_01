@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tập hàm 01</title>
+</head>
+<body>
+<script>
+    //Bài 1
+    function  alertMessage(){
+        alert("Bài 1:xin chào")
+    }
+    alertMessage()
+    //Bài2
+    function funct1(number){
+        return number+1;
+    }
+    document.write("Bài 2:"+funct1(5));
+    document.write("<br>");
+    //Bài 3
+    function funct2(number1,number2) {
+        if (number1>number2){
+            document.write("Bài 3:số thứ 1 lớn hớn số thứ 2")
+        }else {
+            let sum=number1+number2;
+            document.write("Bài 3:Tông của 2 số là" + sum)
+        }
+    }
+    n1=prompt("nhâp vào số 1")
+    n2=prompt("nhập vào số 2")
+    funct2(n1,n2)
+    //Bài 4:
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        return result;
+    }
+    result = 0;
+    document.write("<br>")
+    document.write("Result trước gọi hàm là " + result +"<br>")
+    result = addNumbers();
+    document.write("Result sau gọi hàm là " + result +"<br>")
+    //Bài 5
+    let arr1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe","Regulus"]
+    let  arr2=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" ,"Leo"]
+    let index=-1
+    function fucnt_3(name) {
+        for (let i=0;i<arr1.length;i++) {
+            if (name==arr1[i]) {
+                index=i
+            }
+        }
+
+        if (index==-1) {
+            document.write("không tìm thấy ngôi sao")
+        }else {
+            document.write("Chòm sao của ngôi sao "+arr1[index]+" là "+arr2[index])
+        }
+    }
+
+    let name_Star=prompt("nhập tên ngôi sao cân tìm kiếm")
+    fucnt_3(name_Star);
+</script>
+</body>
+</html>
